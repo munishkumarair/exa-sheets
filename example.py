@@ -2,9 +2,9 @@ import os
 import pandas as pd
 import exa_py
 from typing import Any, Dict
-
+EXA_API_KEY = os.environ.get("EXA_API_KEY")
 # Initialize the Exa client (replace with your actual key or config)
-exa = exa_py.Exa("ae4398e2-f2e3-4041-a352-cc8dbe72d967")
+exa = exa_py.Exa(EXA_API_KEY)
 
 def fetch_value(company: str, data_point: str) -> str:
     """
@@ -14,7 +14,7 @@ def fetch_value(company: str, data_point: str) -> str:
     prompt = f"What is the {data_point} of {company} in 2024? Return only the value or 'NA' if unavailable."
     try:
         response = exa.answer(prompt)
-        print(response.answer.strip()
+        print(response.answer.strip())
         return response.answer.strip() or "NA"
     except Exception:
         return "NA"

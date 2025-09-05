@@ -1,0 +1,29 @@
+# Key obervations:
+- Sample run for 160 cells 
+- 20 companies X 8 columns
+- Took ~10 minutes to run completely 
+- 21 blanks of total 160 cells, across
+    - Website(6)
+    - HQ(8)
+    - Headcount(6)
+   
+# Key learnings:
+- Need to fine tune the prompts
+    - could categorize prompts for the values 
+        - financial
+        - employee count
+        - Website
+        - HQ, etc.
+- Can add specific sources for some prompts
+    - Need to evaluate what sources can be extracted efficiently
+- Add years to the query wherever applicable
+- Multi year scraping might be a possible task - to explore feasibility for that
+- Need to create schema to contain:
+    - Answer to the query
+    - Sources
+
+# Ask from Giordano
+- Focus on specific use cases 
+    - Need samples of what we need to do for most of the cases since general prompting may not suffice
+    - Ask if the sources are necessary or can be pruned if not requried at all
+    - I think there is 50% hit chance when using this
